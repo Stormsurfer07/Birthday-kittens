@@ -1,16 +1,16 @@
-/* ---------- GLOBAL ---------- */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Comic Sans MS', 'Trebuchet MS', cursive;
-  background: linear-gradient(to bottom, #fff0f5, #fffaf0);
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fff1f6, #fffdf8);
   color: #444;
+  line-height: 1.7;
 }
 
-/* ---------- MAIN LAYOUT ---------- */
+/* ---------- LAYOUT ---------- */
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -23,49 +23,49 @@ body {
   }
 }
 
-/* ---------- SIDE PANELS ---------- */
+/* ---------- KITTENS ---------- */
 .side {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: #fff5f8;
+  align-items: center;
+  background: #fff5f9;
 }
 
 .side img {
-  width: 220px;
+  width: 180px;
   max-width: 70%;
-  image-rendering: pixelated;
-  animation: dance 2s infinite ease-in-out;
+  animation: float 2.5s infinite ease-in-out;
 }
 
-@keyframes dance {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(1deg); }
-  100% { transform: translateY(0) rotate(0deg); }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
 /* ---------- CENTER CARD ---------- */
 .center {
   background: #ffffff;
-  padding: 30px 20px;
+  padding: 35px 25px;
   text-align: center;
-  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+  box-shadow: 0 0 35px rgba(0,0,0,0.08);
 }
 
 h1 {
   color: #ff6fae;
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 34px;
+  margin-bottom: 15px;
 }
 
 .subtitle {
   font-size: 18px;
-  margin: 10px 0 25px;
   color: #666;
+  margin-bottom: 20px;
 }
 
 /* ---------- BUTTONS ---------- */
 .buttons {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -74,16 +74,16 @@ h1 {
 
 .buttons a {
   text-decoration: none;
-  padding: 12px 22px;
+  padding: 12px 24px;
   background: #ffb6d5;
-  color: #fff;
+  color: white;
   border-radius: 30px;
   font-size: 16px;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .buttons a:hover {
-  background: #ff92c2;
+  background: #ff94c5;
   transform: translateY(-2px);
 }
 
@@ -92,10 +92,16 @@ h1 {
   text-align: center;
   font-size: 32px;
   color: #ff6fae;
-  margin: 25px 0 10px;
+  margin: 30px 0 10px;
 }
 
-/* Gallery layout */
+.poem-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* Gallery */
 .poem-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -104,15 +110,15 @@ h1 {
   justify-items: center;
 }
 
-/* Individual poem images */
+/* Poem images */
 .poem-gallery img {
   width: 100%;
-  max-width: 420px;       /* ⭐ controls image size */
+  max-width: 420px;
   height: auto;
-  border-radius: 18px;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+  background: white;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
 
@@ -123,13 +129,12 @@ h1 {
 /* ---------- BACK BUTTON ---------- */
 .back-btn {
   display: block;
-  text-align: center;
-  margin: 30px auto;
+  margin: 35px auto;
   width: fit-content;
-  text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 22px;
   background: #ffe0ed;
   color: #ff6fae;
+  text-decoration: none;
   border-radius: 25px;
   font-size: 16px;
   transition: background 0.3s ease;
@@ -137,16 +142,4 @@ h1 {
 
 .back-btn:hover {
   background: #ffc6dc;
-}
-
-/* ---------- SMALL TOUCHES ---------- */
-.heart {
-  color: #ff6fae;
-  animation: float 2s infinite ease-in-out;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
 }
