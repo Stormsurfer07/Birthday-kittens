@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Sayantani 🎂🐱</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,36 +14,57 @@
   <div class="container">
 
     <!-- Left kitten -->
-    <img src="kitten-left.gif" class="kitten-img left" alt="Dancing kitten">
+    <img 
+      src="kitten-left.gif" 
+      class="kitten-img" 
+      alt="Cute dancing kitten">
 
     <!-- Birthday card -->
     <div class="card">
-      <h1>🎂 Happy Birthday Sayantani Dutta 🎂</h1>
+      <h1>🎂 Happy Birthday<br>Sayantani Dutta 🎂</h1>
+
       <p>
         Today is special because you exist 💖<br><br>
-        May your day be full of smiles, warmth,
-        and all the gentle happiness you deserve.<br><br>
-        These little kittens are dancing just for you 🐾✨<br><br>
-        Stay happy. Stay kind. Stay wonderfully you 💕
+
+        May your day be filled with gentle smiles,  
+        warm moments, and all the happiness  
+        your heart truly deserves.<br><br>
+
+        These little kittens are dancing  
+        just to make you smile 🐾✨<br><br>
+
+        Stay happy.  
+        Stay kind.  
+        Stay beautifully you 💕
       </p>
     </div>
 
     <!-- Right kitten -->
-    <img src="kitten-right.gif" class="kitten-img right" alt="Dancing kitten">
+    <img 
+      src="kitten-right.gif" 
+      class="kitten-img right" 
+      alt="Cute dancing kitten">
 
   </div>
 
+  <!-- Floating hearts -->
   <script>
-    const hearts = ["💖","💕","💗","💓"];
+    const hearts = ["💖", "💕", "💗", "💓"];
+
     function createHeart() {
-      const h = document.createElement("span");
-      h.className = "heart";
-      h.innerText = hearts[Math.floor(Math.random() * hearts.length)];
-      h.style.left = Math.random() * 100 + "vw";
-      document.body.appendChild(h);
-      setTimeout(() => h.remove(), 8000);
+      const heart = document.createElement("span");
+      heart.className = "heart";
+      heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (7 + Math.random() * 4) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 11000);
     }
-    setInterval(createHeart, 500);
+
+    setInterval(createHeart, 600);
   </script>
 
 </body>
