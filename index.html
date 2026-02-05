@@ -12,7 +12,7 @@
   <div class="container">
 
     <!-- Left kitten -->
-    <img src="kitten-left.gif" class="kitten left" alt="kitten">
+    <img src="kitten-left.gif" class="kitten left" alt="Cute kitten">
 
     <!-- Center card -->
     <div class="card">
@@ -20,30 +20,36 @@
 
       <p>
         Today is special because you exist 🤍<br><br>
+
         May your days be soft, warm,  
         and filled with tiny moments of happiness 🐾<br><br>
+
         These little kittens are here  
         just to wish you a gentle, happy birthday 💕
       </p>
+
+      <div class="signature">
+        — from someone who truly wishes you happiness 🌸
+      </div>
     </div>
 
     <!-- Right kitten -->
-    <img src="kitten-right.gif" class="kitten right" alt="kitten">
+    <img src="kitten-right.gif" class="kitten right" alt="Cute kitten">
 
   </div>
 
-  <!-- Soft floating paws -->
+  <!-- Floating paws -->
   <script>
-    function paw() {
-      const p = document.createElement("span");
-      p.className = "paw";
-      p.innerText = "🐾";
-      p.style.left = Math.random() * 100 + "vw";
-      p.style.animationDuration = (10 + Math.random() * 5) + "s";
-      document.body.appendChild(p);
-      setTimeout(() => p.remove(), 15000);
+    function createPaw() {
+      const paw = document.createElement("span");
+      paw.className = "paw";
+      paw.innerText = "🐾";
+      paw.style.left = Math.random() * 100 + "vw";
+      paw.style.animationDuration = (12 + Math.random() * 4) + "s";
+      document.body.appendChild(paw);
+      setTimeout(() => paw.remove(), 16000);
     }
-    setInterval(paw, 1200);
+    setInterval(createPaw, 1400);
   </script>
 
 </body>
