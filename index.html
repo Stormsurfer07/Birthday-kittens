@@ -3,49 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Happy Birthday Sayantani 🎂🐱</title>
-
-  <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <div class="container">
-    <!-- Left dancing kitten -->
-    <div class="kitten">😸</div>
+
+    <!-- Left kitten -->
+    <img src="kitten-left.gif" class="kitten-img left" alt="Dancing kitten">
 
     <!-- Birthday card -->
     <div class="card">
       <h1>🎂 Happy Birthday Sayantani Dutta 🎂</h1>
       <p>
-        Today is special because you are in this world 💖<br><br>
-        May your day be filled with smiles, laughter,
-        and all the little moments that warm your heart.<br><br>
-        Just like these kittens dancing happily,
-        may joy keep bouncing around you all day long 🐾✨<br><br>
-        Stay happy. Stay kind. Stay beautifully you 💕
+        Today is special because you exist 💖<br><br>
+        May your day be full of smiles, warmth,
+        and all the gentle happiness you deserve.<br><br>
+        These little kittens are dancing just for you 🐾✨<br><br>
+        Stay happy. Stay kind. Stay wonderfully you 💕
       </p>
     </div>
 
-    <!-- Right dancing kitten -->
-    <div class="kitten right">😻</div>
+    <!-- Right kitten -->
+    <img src="kitten-right.gif" class="kitten-img right" alt="Dancing kitten">
+
   </div>
 
-  <!-- Floating hearts script -->
   <script>
     const hearts = ["💖","💕","💗","💓"];
-
     function createHeart() {
       const h = document.createElement("span");
       h.className = "heart";
       h.innerText = hearts[Math.floor(Math.random() * hearts.length)];
       h.style.left = Math.random() * 100 + "vw";
-      h.style.animationDuration = (6 + Math.random() * 6) + "s";
       document.body.appendChild(h);
-
-      setTimeout(() => h.remove(), 12000);
+      setTimeout(() => h.remove(), 8000);
     }
-
     setInterval(createHeart, 500);
   </script>
 
