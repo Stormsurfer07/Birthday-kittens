@@ -6,11 +6,18 @@
 }
 
 body {
-  background: linear-gradient(120deg, #fde2e4, #e8f8f5);
+  background: linear-gradient(
+    to right,
+    #fde2e4 0%,
+    #ffffff 35%,
+    #ffffff 65%,
+    #fff1c1 100%
+  );
   min-height: 100vh;
   overflow: hidden;
 }
 
+/* Layout */
 .container {
   height: 100vh;
   display: flex;
@@ -22,11 +29,11 @@ body {
 /* Card */
 .card {
   background: white;
-  padding: 32px;
-  border-radius: 18px;
-  max-width: 420px;
+  padding: 36px 32px;
+  border-radius: 22px;
+  max-width: 460px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
   z-index: 2;
 }
 
@@ -37,25 +44,34 @@ body {
 
 .card p {
   color: #555;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+
+.signature {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
 }
 
 /* Kittens */
 .kitten {
-  width: 110px;              /* 👈 smaller */
+  width: 90px;
   position: absolute;
-  bottom: 12%;
-  animation: gentle 3.5s infinite ease-in-out;
+  bottom: 18%;
+  animation: sway 4s ease-in-out infinite;
   opacity: 0.95;
 }
 
 .kitten.left {
-  left: 6%;
+  left: 8%;
+  transform: rotate(-4deg);
 }
 
 .kitten.right {
-  right: 6%;
+  right: 8%;
+  transform: rotate(4deg);
   animation-delay: 1.5s;
 }
 
@@ -65,16 +81,16 @@ body {
   bottom: -40px;
   font-size: 22px;
   opacity: 0.6;
-  animation: rise linear forwards;
+  animation: floatUp linear forwards;
 }
 
 /* Animations */
-@keyframes gentle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+@keyframes sway {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0deg); }
 }
 
-@keyframes rise {
+@keyframes floatUp {
   from {
     transform: translateY(0);
     opacity: 0.6;
@@ -88,11 +104,11 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
   .kitten {
-    width: 85px;
-    bottom: 8%;
+    width: 75px;
+    bottom: 10%;
   }
 
   .card {
-    margin: 0 15px;
+    margin: 0 16px;
   }
 }
