@@ -3,68 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Sayantani 🎂🐱</title>
-
-  <!-- External CSS -->
+  <title>Happy Birthday Sayantani 🐱🎂</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- Optional soft music (plays after click) -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container" onclick="playMusic()">
 
     <!-- Left kitten -->
-    <img 
-      src="kitten-left.gif" 
-      class="kitten-img" 
-      alt="Cute dancing kitten">
+    <img src="kitten-left.gif" class="kitten left" alt="Cute kitten">
 
-    <!-- Birthday card -->
+    <!-- Card -->
     <div class="card">
-      <h1>🎂 Happy Birthday<br>Sayantani Dutta 🎂</h1>
+      <h1>Happy Birthday<br>Sayantani Dutta 🎂</h1>
 
       <p>
-        Today is special because you exist 💖<br><br>
+        Today feels warmer just because it’s your birthday 🤍<br><br>
 
-        May your day be filled with gentle smiles,  
-        warm moments, and all the happiness  
-        your heart truly deserves.<br><br>
+        May your life always be filled with  
+        soft moments, gentle smiles,  
+        and little joys — just like kittens 🐾<br><br>
 
-        These little kittens are dancing  
-        just to make you smile 🐾✨<br><br>
+        These two are dancing only for you,  
+        hoping to steal a tiny smile from you today 🐱✨<br><br>
 
         Stay happy.  
-        Stay kind.  
-        Stay beautifully you 💕
+        Stay loved.  
+        And always stay wonderfully you 💕
       </p>
+
+      <span class="hint">(tap anywhere ✨)</span>
     </div>
 
     <!-- Right kitten -->
-    <img 
-      src="kitten-right.gif" 
-      class="kitten-img right" 
-      alt="Cute dancing kitten">
+    <img src="kitten-right.gif" class="kitten right" alt="Cute kitten">
 
   </div>
 
-  <!-- Floating hearts -->
+  <!-- Floating paw prints -->
   <script>
-    const hearts = ["💖", "💕", "💗", "💓"];
+    const paws = ["🐾","🐾","🐾"];
 
-    function createHeart() {
-      const heart = document.createElement("span");
-      heart.className = "heart";
-      heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = (7 + Math.random() * 4) + "s";
-      document.body.appendChild(heart);
+    function createPaw() {
+      const paw = document.createElement("span");
+      paw.className = "paw";
+      paw.innerText = paws[0];
+      paw.style.left = Math.random() * 100 + "vw";
+      paw.style.animationDuration = (8 + Math.random() * 4) + "s";
+      document.body.appendChild(paw);
 
-      setTimeout(() => {
-        heart.remove();
-      }, 11000);
+      setTimeout(() => paw.remove(), 12000);
     }
 
-    setInterval(createHeart, 600);
+    setInterval(createPaw, 900);
+
+    function playMusic() {
+      document.getElementById("bg-music").play();
+    }
   </script>
 
 </body>
