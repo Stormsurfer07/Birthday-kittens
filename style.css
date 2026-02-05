@@ -1,178 +1,155 @@
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
 }
 
-/* ===== HOME PAGE ===== */
-
+/* ---------- BODY ---------- */
 body {
-  background: linear-gradient(
-    to right,
-    #fde2e4 0%,
-    #ffffff 35%,
-    #ffffff 65%,
-    #fff1c1 100%
-  );
+  font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #fff0f5, #fffaf0);
+  color: #444;
   min-height: 100vh;
-  overflow: hidden;
 }
 
+/* ---------- MAIN LAYOUT ---------- */
 .container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 420px 1fr;
+  min-height: 100vh;
 }
 
+/* ---------- CENTER CARD ---------- */
 .card {
-  background: white;
-  padding: 36px 32px;
-  border-radius: 22px;
-  max-width: 460px;
-  text-align: center;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-  z-index: 2;
-}
-
-.card h1 {
-  color: #ff6f91;
-  margin-bottom: 18px;
-}
-
-.card p {
-  color: #555;
-  font-size: 15.5px;
-  line-height: 1.8;
-}
-
-.signature {
-  margin-top: 18px;
-  font-size: 13px;
-  color: #888;
-  font-style: italic;
-}
-
-/* Buttons */
-.buttons {
-  margin-top: 22px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #ff6f91;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: #ff4f7a;
-}
-
-/* Kittens */
-.kitten {
-  width: 90px;
-  position: absolute;
-  bottom: 18%;
-  animation: sway 4s ease-in-out infinite;
-  opacity: 0.95;
-}
-
-.kitten.left {
-  left: 8%;
-}
-
-.kitten.right {
-  right: 8%;
-  animation-delay: 1.5s;
-}
-
-/* Floating paws */
-.paw {
-  position: fixed;
-  bottom: -40px;
-  font-size: 22px;
-  opacity: 0.6;
-  animation: floatUp linear forwards;
-}
-
-/* Animations */
-@keyframes sway {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes floatUp {
-  from {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
-  to {
-    transform: translateY(-110vh);
-    opacity: 0;
-  }
-}
-
-/* ===== POEMS PAGE ===== */
-
-.poems-body {
-  background: #fffafc;
-  overflow-y: auto;
-}
-
-.poems-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  background: #ffffff;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
-.poems-container h1 {
-  color: #ff6f91;
-  margin-bottom: 8px;
+/* ---------- HEADINGS ---------- */
+h1 {
+  font-size: 42px;
+  color: #ff6fae;
+  margin-bottom: 10px;
 }
 
-.poem-note {
-  font-size: 14px;
-  color: #777;
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* ---------- MESSAGE TEXT ---------- */
+.message {
+  font-size: 17px;
+  line-height: 1.7;
   margin-bottom: 30px;
 }
 
-.poem {
-  background: white;
-  padding: 16px;
-  border-radius: 18px;
-  margin-bottom: 28px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.poem img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.back-btn {
+/* ---------- BUTTONS ---------- */
+.btn {
   display: inline-block;
-  margin-top: 20px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #ff6fae;
+  color: #fff;
   text-decoration: none;
-  color: #ff6f91;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 10px;
+  transition: all 0.3s ease;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+.btn:hover {
+  background: #ff4f9a;
+  transform: translateY(-2px);
+}
+
+/* ---------- KITTENS ---------- */
+.kitten {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kitten img {
+  width: 280px;
+  max-width: 90%;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+/* subtle alternating delay */
+.kitten.left img {
+  animation-delay: 0s;
+}
+
+.kitten.right img {
+  animation-delay: 1.2s;
+}
+
+/* ---------- KITTEN ANIMATION ---------- */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------- POEMS PAGE ---------- */
+.poem-title {
+  text-align: center;
+  font-size: 36px;
+  margin: 30px 0;
+  color: #ff6fae;
+}
+
+.poem-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px 30px 40px;
+}
+
+.poem-gallery img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.poem-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+  display: block;
+  text-align: center;
+  margin: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ff6fae;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
   .kitten {
-    width: 75px;
-    bottom: 10%;
+    display: none;
   }
 
   .card {
-    margin: 0 16px;
+    margin: 30px;
   }
 }
