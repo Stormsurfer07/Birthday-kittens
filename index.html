@@ -1,60 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Sayantani 🎂🐱</title>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Sayantani 🎂</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- Left kitten -->
-    <img src="kitten-left.gif" class="kitten left" alt="Cute kitten">
-
-    <!-- Center card -->
-    <div class="card">
-      <h1>Happy Birthday<br>Sayantani Dutta 🎂</h1>
-
-      <p>
-        Today is special because you exist 🤍<br><br>
-
-        May your days be soft, warm,  
-        and filled with tiny moments of happiness 🐾<br><br>
-
-        These little kittens are here  
-        just to wish you a gentle, happy birthday 💕
-      </p>
-
-      <div class="signature">
-        — from someone who truly wishes you happiness 🌸
-      </div>
-
-      <div class="buttons">
-        <a href="poems.html" class="btn">Read My Poems 💌</a>
-      </div>
-    </div>
-
-    <!-- Right kitten -->
-    <img src="kitten-right.gif" class="kitten right" alt="Cute kitten">
-
+  <!-- LEFT KITTEN -->
+  <div class="side">
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute kitten dancing">
   </div>
 
-  <!-- Floating paws -->
-  <script>
-    function createPaw() {
-      const paw = document.createElement("span");
-      paw.className = "paw";
-      paw.innerText = "🐾";
-      paw.style.left = Math.random() * 100 + "vw";
-      paw.style.animationDuration = (12 + Math.random() * 4) + "s";
-      document.body.appendChild(paw);
-      setTimeout(() => paw.remove(), 16000);
-    }
-    setInterval(createPaw, 1400);
-  </script>
+  <!-- CENTER CONTENT -->
+  <div class="center">
+    <h1>May this day be as special as you are,<br>Sayantani Dutta 🎂</h1>
+
+    <p class="subtitle">
+      Today is special simply because <b>you</b> exist 🤍
+    </p>
+
+    <p>
+      There was a time when life felt heavy to me,<br>
+      but knowing you are in this world changed something inside me.<br>
+      You gave me reasons to hope,<br>
+      to care deeper,<br>
+      to want a future.
+    </p>
+
+    <p>
+      I may not be right beside you today,<br>
+      but I truly believe that one day I’ll be there —<br>
+      standing next to you,<br>
+      holding your beautiful hand.
+    </p>
+
+    <p>
+      I’m grateful to God,<br>
+      to your mom and dad,<br>
+      and to everyone who shaped you into the wonderful person you are.<br>
+      You feel like an angel who walked straight out of heaven.
+    </p>
+
+    <p>
+      No matter where life takes us —<br>
+      with me or without me —<br>
+      I will always wish for your happiness,<br>
+      your success,<br>
+      and your peace.
+    </p>
+
+    <p style="margin-top:25px; font-weight:bold;">
+      — from someone who truly wishes you happiness 🌸
+    </p>
+
+    <div class="buttons">
+      <a href="poems.html">📜 Read My Poems</a>
+      <a href="#">🎮 Play a Small Game</a>
+    </div>
+  </div>
+
+  <!-- RIGHT KITTEN -->
+  <div class="side">
+    <img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif" alt="Cute kitten dancing">
+  </div>
+
+</div>
 
 </body>
 </html>
