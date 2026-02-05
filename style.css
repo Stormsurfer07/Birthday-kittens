@@ -5,7 +5,6 @@ body {
   overflow: hidden;
 }
 
-/* Layout */
 .container {
   display: flex;
   justify-content: space-between;
@@ -14,7 +13,6 @@ body {
   padding: 20px;
 }
 
-/* Card */
 .card {
   background: white;
   max-width: 520px;
@@ -27,34 +25,27 @@ body {
 
 h1 {
   color: #ff5fa2;
-  font-size: 2.4em;
 }
 
 p {
-  font-size: 1.1em;
   color: #444;
   line-height: 1.6;
 }
 
-/* Lively dancing kittens */
-.kitten {
-  font-size: 5.5rem;
-  animation: kittyDance 0.9s infinite;
-  transform-origin: center bottom;
-  user-select: none;
+/* REAL KITTENS */
+.kitten-img {
+  width: 180px;
+  animation: bounce 1.2s infinite ease-in-out;
 }
 
-.kitten.right {
-  animation-delay: 0.45s;
+.kitten-img.right {
+  animation-delay: 0.6s;
 }
 
-@keyframes kittyDance {
-  0%   { transform: translateY(0) translateX(0) rotate(0deg); }
-  20%  { transform: translateY(-25px) translateX(-10px) rotate(-12deg); }
-  40%  { transform: translateY(0) translateX(10px) rotate(12deg); }
-  60%  { transform: translateY(-20px) translateX(-8px) rotate(-10deg); }
-  80%  { transform: translateY(0) translateX(8px) rotate(10deg); }
-  100% { transform: translateY(0) translateX(0) rotate(0deg); }
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
 }
 
 /* Floating hearts */
@@ -63,22 +54,9 @@ p {
   font-size: 1.4rem;
   color: #ff5fa2;
   animation: float 8s linear infinite;
-  user-select: none;
 }
 
 @keyframes float {
-  0% { transform: translateY(100vh); opacity: 0; }
-  10% { opacity: 1; }
-  100% { transform: translateY(-120vh); opacity: 0; }
-}
-
-/* Mobile friendly */
-@media (max-width: 768px) {
-  .kitten {
-    font-size: 4rem;
-  }
-
-  .card {
-    max-width: 90%;
-  }
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-120vh); opacity: 0; }
 }
