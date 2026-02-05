@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Sayantani 🎂</title>
+  <title>For Sayantani 🎁</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Floating hearts background -->
+<!-- Floating hearts -->
 <div class="hearts">
   <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
   <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+  <span>❤</span><span>❤</span>
 </div>
 
-<div class="container">
+<!-- GIFT OVERLAY -->
+<div class="gift-overlay" onclick="openGift()">
+  <div class="gift-box">
+    🎁
+  </div>
+  <p class="gift-text">Tap to open your birthday gift</p>
+</div>
 
-  <!-- LEFT KITTEN -->
+<!-- MAIN SITE -->
+<div class="container hidden" id="mainSite">
+
   <div class="side">
     <img src="left-kitten.gif" alt="Cute kitten">
   </div>
 
-  <!-- CENTER CONTENT -->
   <div class="center">
     <h1>May this day be as special as you are,<br>Sayantani Dutta 🎂</h1>
 
-    <p class="subtitle">
-      Today is special simply because <b>you</b> exist 🤍
-    </p>
+    <p class="subtitle">Today is special simply because <b>you</b> exist 🤍</p>
 
     <p>
       There was a time when life felt heavy to me,<br>
@@ -61,12 +67,18 @@
     </div>
   </div>
 
-  <!-- RIGHT KITTEN -->
   <div class="side">
     <img src="right-kitten.gif" alt="Cute kitten">
   </div>
 
 </div>
+
+<script>
+  function openGift() {
+    document.querySelector('.gift-overlay').classList.add('fade-out');
+    document.getElementById('mainSite').classList.remove('hidden');
+  }
+</script>
 
 </body>
 </html>
