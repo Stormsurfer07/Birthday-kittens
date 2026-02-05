@@ -1,71 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Sayantani 🐱🎂</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Sayantani 🎂🐱</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Optional soft music (plays after click) -->
-  <audio id="bg-music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
-
-  <div class="container" onclick="playMusic()">
+  <div class="container">
 
     <!-- Left kitten -->
-    <img src="kitten-left.gif" class="kitten left" alt="Cute kitten">
+    <img src="kitten-left.gif" class="kitten left" alt="kitten">
 
-    <!-- Card -->
+    <!-- Center card -->
     <div class="card">
       <h1>Happy Birthday<br>Sayantani Dutta 🎂</h1>
 
       <p>
-        Today feels warmer just because it’s your birthday 🤍<br><br>
-
-        May your life always be filled with  
-        soft moments, gentle smiles,  
-        and little joys — just like kittens 🐾<br><br>
-
-        These two are dancing only for you,  
-        hoping to steal a tiny smile from you today 🐱✨<br><br>
-
-        Stay happy.  
-        Stay loved.  
-        And always stay wonderfully you 💕
+        Today is special because you exist 🤍<br><br>
+        May your days be soft, warm,  
+        and filled with tiny moments of happiness 🐾<br><br>
+        These little kittens are here  
+        just to wish you a gentle, happy birthday 💕
       </p>
-
-      <span class="hint">(tap anywhere ✨)</span>
     </div>
 
     <!-- Right kitten -->
-    <img src="kitten-right.gif" class="kitten right" alt="Cute kitten">
+    <img src="kitten-right.gif" class="kitten right" alt="kitten">
 
   </div>
 
-  <!-- Floating paw prints -->
+  <!-- Soft floating paws -->
   <script>
-    const paws = ["🐾","🐾","🐾"];
-
-    function createPaw() {
-      const paw = document.createElement("span");
-      paw.className = "paw";
-      paw.innerText = paws[0];
-      paw.style.left = Math.random() * 100 + "vw";
-      paw.style.animationDuration = (8 + Math.random() * 4) + "s";
-      document.body.appendChild(paw);
-
-      setTimeout(() => paw.remove(), 12000);
+    function paw() {
+      const p = document.createElement("span");
+      p.className = "paw";
+      p.innerText = "🐾";
+      p.style.left = Math.random() * 100 + "vw";
+      p.style.animationDuration = (10 + Math.random() * 5) + "s";
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 15000);
     }
-
-    setInterval(createPaw, 900);
-
-    function playMusic() {
-      document.getElementById("bg-music").play();
-    }
+    setInterval(paw, 1200);
   </script>
 
 </body>
